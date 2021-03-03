@@ -17,28 +17,28 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/clear" />
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/parentheses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/parentheses" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/exponent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/exponent" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/division"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/divide" />
         </TableRow>
 
         <TableRow
@@ -46,28 +46,28 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/seven"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/seven" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/eight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/eight" />
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/nine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/nine" />
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/multiplication"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/multiply" />
         </TableRow>
 
         <TableRow
@@ -75,28 +75,28 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/four" />
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/five"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/five" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/substraction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/six" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/subtract" />
         </TableRow>
 
         <TableRow
@@ -104,28 +104,58 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/one" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/two" />
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/three" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/add" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/plusMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plusMinus" />
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/point" />
+
+            <Button
+                android:id="@+id/equals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equals" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
