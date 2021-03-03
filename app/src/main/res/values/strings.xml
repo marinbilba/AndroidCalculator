@@ -22,4 +22,6 @@
     <string name="point">.</string>
     <string name="equals">=</string>
 
+    <string name="backspace"> </string>
+
 </resources>
