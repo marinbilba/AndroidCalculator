@@ -23,5 +23,6 @@
     <string name="equals">=</string>
 
     <string name="backspace"> </string>
+    <string name="display">Enter in a value</string>
 
 </resources>
