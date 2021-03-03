@@ -3,77 +3,158 @@ package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        display = findViewById(R.id.input);
+        display.setShowSoftInputOnFocus(false);
+        display.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getString(R.string.display).equals(display.getText().toString())) {
+                    display.setText("");
+                }
+            }
+        });
     }
-    public void zeroButton(View view){
+
+    private void updateText(String strToAdd) {
+        String oldString = display.getText().toString();
+        int cursorPos = display.getSelectionStart();
+        String leftStr = oldString.substring(0, cursorPos);
+        String rightStr = oldString.substring(cursorPos);
+        if (getString(R.string.display).equals(display.getText().toString())) {
+            display.setText(strToAdd);
+            display.setSelection(cursorPos + 1);
+        } else {
+            display.setText(String.format("%s%s%s", leftStr, strToAdd, rightStr));
+            display.setSelection(cursorPos + 1);
+        }
 
     }
-    public void oneButton(View view){
+
+    public void zeroButton(View view) {
+        updateText("0");
+    }
+
+    public void oneButton(View view) {
+        updateText("1");
+    }
+
+    public void twoButton(View view) {
+        updateText("2");
+    }
+
+    public void threeButton(View view) {
+        updateText("3");
+    }
+
+    public void fourButton(View view) {
+        updateText("4");
+    }
+
+    public void fiveButton(View view) {
+        updateText("5");
+    }
+
+    public void sixButton(View view) {
+        updateText("6");
+    }
+
+    public void sevenButton(View view) {
+        updateText("7");
+    }
+
+    public void eightButton(View view) {
+        updateText("8");
+    }
+
+    public void nineButton(View view) {
+        updateText("9");
+    }
+
+    public void exponentButton(View view) {
+        updateText("^");
+    }
+
+    public void subtractButton(View view) {
+        updateText("-");
+    }
+
+    public void addButton(View view) {
+        updateText("+");
+    }
+
+    public void parenthesesButton(View view) {
+        int cursorPos = display.getSelectionStart();
+        int openPar = 0;
+        int closedPar = 0;
+        int textLength = display.getText().length();
+
+        for (int i = 0; i < cursorPos; i++) {
+            if (display.getText().toString().substring(i, i + 1).equals("(")) {
+                openPar += 1;
+            }
+            if (display.getText().toString().substring(i, i + 1).equals(")")) {
+                closedPar += 1;
+            }
+        }
+            if (openPar == closedPar || display.getText().toString().substring(textLength-1, textLength).equals("(")) {
+                updateText("(");
+
+            }
+            else if (closedPar < openPar && !display.getText().toString().substring(textLength-1 , textLength).equals("(")) {
+                updateText(")");
+
+            }
+            display.setSelection(cursorPos + 1);
 
     }
-    public void twoButton(View view){
+
+    public void equalsButton(View view) {
 
     }
-    public void threeButton(View view){
 
+    public void pointButton(View view) {
+        updateText(".");
     }
-    public void fourButton(View view){
 
+    public void plusMinusButton(View view) {
+        updateText("");
     }
-    public void fiveButton(View view){
 
+    public void multiplyButton(View view) {
+        updateText("*");
     }
-    public void sixButton(View view){
 
+    public void divisionButton(View view) {
+        updateText("/");
     }
-    public void sevenButton(View view){
 
+    public void clearButton(View view) {
+        display.setText("");
     }
-    public void eightButton(View view){
 
-    }
-    public void nineButton(View view){
+    public void backspaceButton(View view) {
+        int cursorPos = display.getSelectionStart();
+        int textLen = display.getText().length();
 
-    }
-    public void exponentButton(View view){
-
-    }
-    public void subtractButton(View view){
-
-    }
-    public void addButton(View view){
-
-    }
-    public void parenthesesButton(View view){
-
-    }
-    public void equalsButton(View view){
-
-    }
-    public void pointButton(View view){
-
-    }
-    public void plusMinusButton(View view){
-
-    }
-    public void multiplyButton(View view){
-
-    }
-    public void divisionButton(View view){
-
-    }
-    public void clearButton(View view){
-
-    }
-    public void backspaceButton(View view){
-
+        if (cursorPos != 0 && textLen != 0) {
+            SpannableStringBuilder selection = (SpannableStringBuilder) display.getText();
+            selection.replace(cursorPos - 1, cursorPos, "");
+            display.setText(selection);
+            display.setSelection(cursorPos - 1);
+        }
     }
 
 }
