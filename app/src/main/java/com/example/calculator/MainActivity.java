@@ -7,6 +7,8 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 
+import org.mariuszgromada.math.mxparser.*;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
@@ -109,20 +111,23 @@ public class MainActivity extends AppCompatActivity {
                 closedPar += 1;
             }
         }
-            if (openPar == closedPar || display.getText().toString().substring(textLength-1, textLength).equals("(")) {
-                updateText("(");
+        if (openPar == closedPar || display.getText().toString().substring(textLength - 1, textLength).equals("(")) {
+            updateText("(");
 
-            }
-            else if (closedPar < openPar && !display.getText().toString().substring(textLength-1 , textLength).equals("(")) {
-                updateText(")");
+        } else if (closedPar < openPar && !display.getText().toString().substring(textLength - 1, textLength).equals("(")) {
+            updateText(")");
 
-            }
-            display.setSelection(cursorPos + 1);
+        }
+        display.setSelection(cursorPos + 1);
 
     }
 
     public void equalsButton(View view) {
-
+        String userExpression = display.getText().toString();
+        Expression expression = new Expression(userExpression);
+        String result = String.valueOf(expression.calculate());
+        display.setText(result);
+        display.setSelection(result.length());
     }
 
     public void pointButton(View view) {
@@ -130,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void plusMinusButton(View view) {
-        updateText("");
+
     }
 
     public void multiplyButton(View view) {
