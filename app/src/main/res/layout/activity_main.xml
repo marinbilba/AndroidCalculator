@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/clearBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
@@ -145,7 +145,8 @@
                 android:background="@drawable/circle"
                 android:onClick="fourButton"
                 android:text="@string/four"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/fiveBTN"
@@ -157,7 +158,8 @@
                 android:background="@drawable/circle"
                 android:onClick="fiveButton"
                 android:text="@string/five"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/sixBTN"
@@ -169,7 +171,8 @@
                 android:background="@drawable/circle"
                 android:onClick="sixButton"
                 android:text="@string/six"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/subtractionBTN"
@@ -181,7 +184,8 @@
                 android:background="@drawable/circle"
                 android:onClick="subtractButton"
                 android:text="@string/subtract"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
         </TableRow>
 
         <TableRow
@@ -198,7 +202,8 @@
                 android:background="@drawable/circle"
                 android:onClick="oneButton"
                 android:text="@string/one"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/twoBTN"
@@ -210,7 +215,8 @@
                 android:background="@drawable/circle"
                 android:onClick="twoButton"
                 android:text="@string/two"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/threeBTN"
@@ -222,7 +228,8 @@
                 android:background="@drawable/circle"
                 android:onClick="threeButton"
                 android:text="@string/three"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/addBTN"
@@ -234,7 +241,8 @@
                 android:background="@drawable/circle"
                 android:onClick="addButton"
                 android:text="@string/add"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
         </TableRow>
 
@@ -252,7 +260,8 @@
                 android:background="@drawable/circle"
                 android:onClick="plusMinusButton"
                 android:text="@string/plusMinus"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
             <Button
                 android:id="@+id/zeroBTN"
@@ -264,9 +273,10 @@
                 android:background="@drawable/circle"
                 android:onClick="zeroButton"
                 android:text="@string/zero"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/pointBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
@@ -276,9 +286,10 @@
                 android:background="@drawable/circle"
                 android:onClick="pointButton"
                 android:text="@string/point"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/equalsBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
@@ -289,7 +300,8 @@
                 android:backgroundTint="#43A047"
                 android:onClick="equalsButton"
                 android:text="@string/equals"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
         </TableRow>
     </TableLayout>
 
